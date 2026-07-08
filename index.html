@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="موقع تذكاري روحي يحكي رحلة حياة الأب — خدمة، إيمان، وأثر يمتد عبر الأجيال.">
+  <meta name="keywords" content="كاهن، كنيسة، سيرة روحية، خدمة مسيحية، مصر">
+  <meta name="author" content="Father Legacy">
+  <meta name="theme-color" content="#0a0a0f">
+  <meta property="og:title" content="الأب — رحلة إيمان وخدمة">
+  <meta property="og:description" content="موقع تذكاري يحكي قصة حياة كاهن مُكرَّس لخدمة الله والمجتمع.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/og-cover.jpg">
+  <title>الأب — رحلة إيمان وخدمة</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Libraries -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader__cross"></div>
+    <p class="preloader__text">جاري التحميل...</p>
+  </div>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="التنقل الرئيسي">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-icon" aria-hidden="true">✝</span>
+        <span class="nav__logo-text">الأب</span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#hero" class="nav__link active">الرئيسية</a></li>
+        <li><a href="#biography" class="nav__link">السيرة</a></li>
+        <li><a href="#gallery" class="nav__link">المعرض</a></li>
+        <li><a href="#voices" class="nav__link">الأصوات</a></li>
+        <li><a href="#achievements" class="nav__link">الإنجازات</a></li>
+        <li><a href="#story" class="nav__link">القصة</a></li>
+        <li><a href="#testimonials" class="nav__link">شهادات</a></li>
+        <li><a href="#legacy" class="nav__link">الإرث</a></li>
+        <li><a href="#contact" class="nav__link">تواصل</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero" aria-label="القسم الرئيسي">
+      <div class="hero__video-wrap">
+        <video class="hero__video" id="hero-video" autoplay muted loop playsinline poster="assets/images/hero-poster.svg" aria-hidden="true">
+          <source src="assets/videos/church-hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="hero__content container">
+        <p class="hero__subtitle" data-aos="fade-down" data-aos-delay="200">رحلة إيمان وخدمة</p>
+        <h1 class="hero__title" data-aos="fade-up" data-aos-delay="400">
+          <span class="hero__title-line">القس</span>
+          <span class="hero__title-name">[اسم الكاهن]</span>
+        </h1>
+        <blockquote class="hero__quote" data-aos="fade-up" data-aos-delay="600">
+          <p>«ليس من يقول لي: يا رب يا رب، يدخل ملكوت السماوات، بل الذي يصنع إرادة أبي الذي في السماوات.»</p>
+          <cite>— متى 7:21</cite>
+        </blockquote>
+
+        <div class="hero__actions" data-aos="fade-up" data-aos-delay="800">
+          <a href="#biography" class="btn btn--primary">اكتشف الرحلة</a>
+          <button class="btn btn--ghost" id="audio-toggle" aria-label="تشغيل الموسيقى الخلفية">
+            <span class="btn__icon" aria-hidden="true">♪</span>
+            <span class="btn__text">تشغيل الصوت</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>مرّر للأسفل</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+
+      <audio id="bg-audio" loop preload="none">
+        <source src="assets/audio/ambient-church.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+
+    <!-- ==================== BIOGRAPHY TIMELINE ==================== -->
+    <section class="section biography" id="biography" aria-labelledby="biography-title">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__tag">السيرة الذاتية</span>
+          <h2 class="section__title" id="biography-title">رحلة حياة في خدمة الله</h2>
+          <p class="section__desc">من الطفولة إلى الكهنوت — محطات شكّلت إنساناً مُكرَّساً لمحبة الله والناس.</p>
+        </header>
+
+        <div class="timeline" id="timeline">
+          <!-- Timeline Item 1 -->
+          <article class="timeline__item" data-aos="fade-up">
+            <div class="timeline__marker"><span class="timeline__year">١٩٦٠</span></div>
+            <div class="timeline__card">
+              <div class="timeline__image">
+                <img src="assets/images/placeholder.svg" data-placeholder="assets/images/timeline/childhood.jpg" alt="طفولة الكاهن" loading="lazy" width="400" height="300">
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">الطفولة والنشأة</h3>
+                <p class="timeline__text">وُلد في أسرة مسيحية متدينة، حيث ازدهرت في قلبه بذور الإيمان والمحبة منذ الصغر. كانت الكنيسة ملاذه الأول ومصدر فرحه.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Item 2 -->
+          <article class="timeline__item timeline__item--reverse" data-aos="fade-up">
+            <div class="timeline__marker"><span class="timeline__year">١٩٧٨</span></div>
+            <div class="timeline__card">
+              <div class="timeline__image">
+                <img src="assets/images/placeholder.svg" data-placeholder="assets/images/timeline/calling.jpg" alt="دعوة الكهنوت" loading="lazy" width="400" height="300">
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">الدعوة إلى الكهنوت</h3>
+                <p class="timeline__text">في سنّ المراهقة، شعر بدعوة عميقة لخدمة الرب. بدأ يلتزم بالصلاة والخدمة، وقرّر تكريس حياته للرسالة الروحية.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Item 3 -->
+          <article class="timeline__item" data-aos="fade-up">
+            <div class="timeline__marker"><span class="timeline__year">١٩٨٥</span></div>
+            <div class="timeline__card">
+              <div class="timeline__image">
+                <img src="assets/images/placeholder.svg" data-placeholder="assets/images/timeline/ordination.jpg" alt="رسامة الكهنوت" loading="lazy" width="400" height="300">
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">الرسامة الكهنوتية</h3>
+                <p class="timeline__text">بعد سنوات من الدراسة اللاهوتية والتدريب الروحي، تلقّى رسامة الكهنوت في احتفال مهيب أمام آلاف المؤمنين.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Item 4 -->
+          <article class="timeline__item timeline__item--reverse" data-aos="fade-up">
+            <div class="timeline__marker"><span class="timeline__year">١٩٩٠</span></div>
+            <div class="timeline__card">
+              <div class="timeline__image">
+                <img src="assets/images/placeholder.svg" data-placeholder="assets/images/timeline/service.jpg" alt="سنوات الخدمة" loading="lazy" width="400" height="300">
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">سنوات الخدمة الفعلية</h3>
+                <p class="timeline__text">خدم في عدة كنائس، قاد القداسات، وزار المرضى والمسجونين. كان حضوره مصدر عزاء وقوة لكل من التقى به.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Item 5 -->
+          <article class="timeline__item" data-aos="fade-up">
+            <div class="timeline__marker"><span class="timeline__year">٢٠٠٥</span></div>
+            <div class="timeline__card">
+              <div class="timeline__image">
+                <img src="assets/images/placeholder.svg" data-placeholder="assets/images/timeline/achievements.jpg" alt="إنجازات بارزة" loading="lazy" width="400" height="300">
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">إنجازات بارزة</h3>
+                <p class="timeline__text">أسّس مراكز شبابية، نظّم حملات خيرية، وشارك في بناء كنائس جديدة. أثره امتد لآلاف العائلات في المجتمع.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Timeline Item 6 -->
+          <article class="timeline__item timeline__item--reverse" data-aos="fade-up">
+            <div class="timeline__marker"><span class="timeline__year">٢٠٢٤</span></div>
+            <div class="timeline__card">
+              <div class="timeline__image">
+                <img src="assets/images/placeholder.svg" data-placeholder="assets/images/timeline/milestone.jpg" alt="محطة مهمة" loading="lazy" width="400" height="300">
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">محطة مهمة</h3>
+                <p class="timeline__text">احتفل بـ ٣٩ عاماً في الكهنوت، ولا يزال يخدم بكل حيوية وشغف، حاملاً رسالة المحبة والأمل للأجيال القادمة.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MEDIA GALLERY ==================== -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__tag">المعرض</span>
+          <h2 class="section__title" id="gallery-title">لحظات لا تُنسى</h2>
+          <p class="section__desc">صور وفيديوهات توثّق رحلة الخدمة والاحتفالات واللقاءات المجتمعية.</p>
+        </header>
+
+        <!-- Gallery Filters -->
+        <div class="gallery__filters" data-aos="fade-up" role="tablist" aria-label="تصفية المعرض">
+          <button class="gallery__filter active" data-filter="all" role="tab" aria-selected="true">الكل</button>
+          <button class="gallery__filter" data-filter="liturgy" role="tab">القداسات</button>
+          <button class="gallery__filter" data-filter="community" role="tab">المجتمع</button>
+          <button class="gallery__filter" data-filter="events" role="tab">المناسبات</button>
+          <button class="gallery__filter" data-filter="travel" role="tab">الرحلات</button>
+        </div>
+
+        <!-- Image Gallery Grid -->
+        <div class="gallery__grid" id="gallery-grid">
+          <figure class="gallery__item" data-category="liturgy" data-aos="zoom-in">
+            <img src="assets/images/placeholder.svg" alt="قداس أحد" loading="lazy" width="600" height="400" data-full="assets/images/gallery/liturgy-01.jpg">
+            <figcaption class="gallery__caption">قداس أحد — ٢٠٢٣</figcaption>
+          </figure>
+          <figure class="gallery__item" data-category="community" data-aos="zoom-in">
+            <img src="assets/images/placeholder.svg" alt="خدمة المجتمع" loading="lazy" width="600" height="400" data-full="assets/images/gallery/community-01.jpg">
+            <figcaption class="gallery__caption">زيارة دار المسنين — ٢٠٢٢</figcaption>
+          </figure>
+          <figure class="gallery__item" data-category="events" data-aos="zoom-in">
+            <img src="assets/images/placeholder.svg" alt="احتفال عيد القيامة" loading="lazy" width="600" height="400" data-full="assets/images/gallery/event-01.jpg">
+            <figcaption class="gallery__caption">احتفال عيد القيامة — ٢٠٢٤</figcaption>
+          </figure>
+          <figure class="gallery__item" data-category="liturgy" data-aos="zoom-in">
+            <img src="assets/images/placeholder.svg" alt="قداس عيد الميلاد" loading="lazy" width="600" height="400" data-full="assets/images/gallery/liturgy-02.jpg">
+            <figcaption class="gallery__caption">قداس عيد الميلاد — ٢٠٢٣</figcaption>
+          </figure>
+          <figure class="gallery__item" data-category="travel" data-aos="zoom-in">
+            <img src="assets/images/placeholder.svg" alt="رحلة روحية" loading="lazy" width="600" height="400" data-full="assets/images/gallery/travel-01.jpg">
+            <figcaption class="gallery__caption">رحلة روحية إلى القدس — ٢٠١٩</figcaption>
+          </figure>
+          <figure class="gallery__item" data-category="community" data-aos="zoom-in">
+            <img src="assets/images/placeholder.svg" alt="مشروع خيري" loading="lazy" width="600" height="400" data-full="assets/images/gallery/community-02.jpg">
+            <figcaption class="gallery__caption">مشروع إطعام المحتاجين — ٢٠٢١</figcaption>
+          </figure>
+        </div>
+
+        <!-- Video Gallery -->
+        <div class="gallery__videos" data-aos="fade-up">
+          <h3 class="gallery__videos-title">معرض الفيديو</h3>
+          <div class="swiper video-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide video-slide">
+                <div class="video-slide__wrap">
+                  <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="عظة الأحد" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="video-slide__caption">عظة الأحد — ٢٠٢٤</p>
+              </div>
+              <div class="swiper-slide video-slide">
+                <div class="video-slide__wrap">
+                  <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="احتفال رسامة" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="video-slide__caption">ذكرى الرسامة — ٢٠٢٣</p>
+              </div>
+              <div class="swiper-slide video-slide">
+                <div class="video-slide__wrap">
+                  <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="خدمة مجتمعية" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="video-slide__caption">خدمة مجتمعية — ٢٠٢٢</p>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev" aria-label="الفيديو السابق"></div>
+            <div class="swiper-button-next" aria-label="الفيديو التالي"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة" hidden>
+      <button class="lightbox__close" id="lightbox-close" aria-label="إغلاق">&times;</button>
+      <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="الصورة السابقة">&#10094;</button>
+      <img class="lightbox__image" id="lightbox-image" src="" alt="">
+      <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="الصورة التالية">&#10095;</button>
+      <p class="lightbox__caption" id="lightbox-caption"></p>
+    </div>
+
+    <!-- ==================== VOICE & MEMORIES ==================== -->
+    <section class="section voices" id="voices" aria-labelledby="voices-title">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__tag">الأصوات والذكريات</span>
+          <h2 class="section__title" id="voices-title">كلمات تلامس القلب</h2>
+          <p class="section__desc">تسجيلات صوتية لعظات ومواعظ ورسائل روحية تحمل نفحات الإيمان.</p>
+        </header>
+
+        <div class="audio-player" id="main-audio-player" data-aos="fade-up">
+          <div class="audio-player__art">
+            <div class="audio-player__art-glow"></div>
+            <img src="assets/images/placeholder.svg" alt="غلاف التسجيل" loading="lazy" width="200" height="200">
+          </div>
+          <div class="audio-player__body">
+            <h3 class="audio-player__title" id="player-title">عظة الأحد — المحبة التي لا تفشل</h3>
+            <p class="audio-player__meta" id="player-meta">٢٠٢٤ · ٤٥ دقيقة</p>
+            <div class="audio-player__progress-wrap">
+              <span class="audio-player__time" id="player-current">0:00</span>
+              <input type="range" class="audio-player__progress" id="player-progress" value="0" min="0" max="100" aria-label="تقدم التشغيل">
+              <span class="audio-player__time" id="player-duration">0:00</span>
+            </div>
+            <div class="audio-player__controls">
+              <button class="audio-player__btn" id="player-prev" aria-label="التسجيل السابق">⏮</button>
+              <button class="audio-player__btn audio-player__btn--play" id="player-play" aria-label="تشغيل">▶</button>
+              <button class="audio-player__btn" id="player-next" aria-label="التسجيل التالي">⏭</button>
+              <button class="audio-player__btn" id="player-download" aria-label="تحميل">⬇</button>
+              <button class="audio-player__btn" id="player-share" aria-label="مشاركة">↗</button>
+            </div>
+          </div>
+          <audio id="sermon-audio" preload="none">
+            <source src="assets/audio/sermon-01.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <!-- Audio Playlist -->
+        <ul class="audio-playlist" id="audio-playlist" data-aos="fade-up">
+          <li class="audio-playlist__item active" data-src="assets/audio/sermon-01.mp3" data-title="عظة الأحد — المحبة التي لا تفشل" data-meta="٢٠٢٤ · ٤٥ دقيقة">
+            <span class="audio-playlist__num">01</span>
+            <div class="audio-playlist__info">
+              <strong>عظة الأحد — المحبة التي لا تفشل</strong>
+              <span>٢٠٢٤ · ٤٥ دقيقة</span>
+            </div>
+            <span class="audio-playlist__icon" aria-hidden="true">♪</span>
+          </li>
+          <li class="audio-playlist__item" data-src="assets/audio/sermon-02.mp3" data-title="رسالة عيد القيامة" data-meta="٢٠٢٤ · ٣٠ دقيقة">
+            <span class="audio-playlist__num">02</span>
+            <div class="audio-playlist__info">
+              <strong>رسالة عيد القيامة</strong>
+              <span>٢٠٢٤ · ٣٠ دقيقة</span>
+            </div>
+            <span class="audio-playlist__icon" aria-hidden="true">♪</span>
+          </li>
+          <li class="audio-playlist__item" data-src="assets/audio/sermon-03.mp3" data-title="كلمة في ذكرى الرسامة" data-meta="٢٠٢٣ · ٢٠ دقيقة">
+            <span class="audio-playlist__num">03</span>
+            <div class="audio-playlist__info">
+              <strong>كلمة في ذكرى الرسامة</strong>
+              <span>٢٠٢٣ · ٢٠ دقيقة</span>
+            </div>
+            <span class="audio-playlist__icon" aria-hidden="true">♪</span>
+          </li>
+          <li class="audio-playlist__item" data-src="assets/audio/sermon-04.mp3" data-title="موعظة شباب — الطريق إلى النور" data-meta="٢٠٢٣ · ٣٥ دقيقة">
+            <span class="audio-playlist__num">04</span>
+            <div class="audio-playlist__info">
+              <strong>موعظة شباب — الطريق إلى النور</strong>
+              <span>٢٠٢٣ · ٣٥ دقيقة</span>
+            </div>
+            <span class="audio-playlist__icon" aria-hidden="true">♪</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS ==================== -->
+    <section class="section achievements" id="achievements" aria-labelledby="achievements-title">
+      <div class="achievements__bg" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__tag">الإنجازات والأثر</span>
+          <h2 class="section__title" id="achievements-title">أرقام تحكي قصة خدمة</h2>
+        </header>
+
+        <div class="stats-grid">
+          <article class="stat-card" data-aos="flip-up" data-aos-delay="0">
+            <div class="stat-card__icon" aria-hidden="true">⛪</div>
+            <span class="stat-card__number" data-count="39">0</span>
+            <span class="stat-card__suffix">+</span>
+            <p class="stat-card__label">سنة في الوزارة</p>
+          </article>
+          <article class="stat-card" data-aos="flip-up" data-aos-delay="100">
+            <div class="stat-card__icon" aria-hidden="true">🏛</div>
+            <span class="stat-card__number" data-count="5">0</span>
+            <p class="stat-card__label">كنائس خُدم فيها</p>
+          </article>
+          <article class="stat-card" data-aos="flip-up" data-aos-delay="200">
+            <div class="stat-card__icon" aria-hidden="true">🤝</div>
+            <span class="stat-card__number" data-count="25">0</span>
+            <span class="stat-card__suffix">+</span>
+            <p class="stat-card__label">مشروع مجتمعي</p>
+          </article>
+          <article class="stat-card" data-aos="flip-up" data-aos-delay="300">
+            <div class="stat-card__icon" aria-hidden="true">❤</div>
+            <span class="stat-card__number" data-count="10000">0</span>
+            <span class="stat-card__suffix">+</span>
+            <p class="stat-card__label">حياة تأثرت بخدمته</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INTERACTIVE STORY ==================== -->
+    <section class="story" id="story" aria-labelledby="story-title">
+      <h2 class="visually-hidden" id="story-title">القصة التفاعلية</h2>
+
+      <div class="story__chapter" data-chapter="1">
+        <div class="story__bg" style="background-image: url('assets/images/hero-poster.svg')"></div>
+        <div class="story__overlay"></div>
+        <div class="story__content container">
+          <span class="story__chapter-num">الفصل الأول</span>
+          <h3 class="story__heading">بذرة الإيمان</h3>
+          <p class="story__text">في قرية صغيرة، حيث تُرفع أجراس الكنيسة كل صباح، نشأ فتى يحمل في قلبه حباً عميقاً لله. كانت والدته تقرأ له الكتاب المقدس كل ليلة، ووالده يأخذه إلى القداس كل أحد.</p>
+        </div>
+      </div>
+
+      <div class="story__chapter" data-chapter="2">
+        <div class="story__bg" style="background-image: url('assets/images/hero-poster.svg')"></div>
+        <div class="story__overlay"></div>
+        <div class="story__content container">
+          <span class="story__chapter-num">الفصل الثاني</span>
+          <h3 class="story__heading">صوت الدعوة</h3>
+          <p class="story__text">في ليلة صامتة من ليالي الصوم، سمع صوتاً يدعوه: «اتبعني». لم يكن ذلك صوتاً مُسمَعاً بالأذن، بل همساً في أعماق روحه. من تلك اللحظة، عرف أن حياته لن تكون كحياة الآخرين.</p>
+        </div>
+      </div>
+
+      <div class="story__chapter" data-chapter="3">
+        <div class="story__bg" style="background-image: url('assets/images/hero-poster.svg')"></div>
+        <div class="story__overlay"></div>
+        <div class="story__content container">
+          <span class="story__chapter-num">الفصل الثالث</span>
+          <h3 class="story__heading">سنوات التكوين</h3>
+          <p class="story__text">سنوات من الدراسة اللاهوتية، الصوم، والصلاة. تعلّم اللغات القديمة، ودرس تاريخ الكنيسة، وخدم في المستشفيات والسجون. كل يوم كان خطوة نحو الكهنوت.</p>
+        </div>
+      </div>
+
+      <div class="story__chapter" data-chapter="4">
+        <div class="story__bg" style="background-image: url('assets/images/hero-poster.svg')"></div>
+        <div class="story__overlay"></div>
+        <div class="story__content container">
+          <span class="story__chapter-num">الفصل الرابع</span>
+          <h3 class="story__heading">خدمة بلا كلل</h3>
+          <p class="story__text">عقود من الخدمة — زواج، معمودية، جنازات، زيارات. كان حاضراً في الفرح والحزن على حد سواء. قال عنه أحد المؤمنين: «عندما يدخل الأب، يدخل معه السلام.»</p>
+        </div>
+      </div>
+
+      <div class="story__chapter" data-chapter="5">
+        <div class="story__bg" style="background-image: url('assets/images/hero-poster.svg')"></div>
+        <div class="story__overlay"></div>
+        <div class="story__content container">
+          <span class="story__chapter-num">الفصل الخامس</span>
+          <h3 class="story__heading">إرث يمتد</h3>
+          <p class="story__text">اليوم، يكمل رحلته بابتسامة وتواضع. يُعلّم الشباب، يُرشد العائلات، ويُصلّي من أجل العالم. إرثه ليس في الحجر، بل في القلوب التي غيّرها.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__tag">شهادات</span>
+          <h2 class="section__title" id="testimonials-title">كلمات من القلب</h2>
+          <p class="section__desc">شهادات من أشخاص تأثرت حياتهم بخدمة الأب.</p>
+        </header>
+
+        <div class="swiper testimonial-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="testimonial-card">
+                <div class="testimonial-card__photo">
+                  <img src="assets/images/placeholder.svg" alt="ماريا ج." loading="lazy" width="80" height="80">
+                </div>
+                <blockquote class="testimonial-card__quote">
+                  <p>«الأب غيّر حياتي. في أحلك لحظاتي، كانت كلماته نوراً يهديني. لم أكن أعرف معنى الأمل حتى التقيت به.»</p>
+                </blockquote>
+                <footer class="testimonial-card__author">
+                  <strong>ماريا ج.</strong>
+                  <span>مُعلمة — القاهرة</span>
+                </footer>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="testimonial-card">
+                <div class="testimonial-card__photo">
+                  <img src="assets/images/placeholder.svg" alt="بطرس م." loading="lazy" width="80" height="80">
+                </div>
+                <blockquote class="testimonial-card__quote">
+                  <p>«خدم ٣٠ عاماً في كنيستنا. كان أباً لنا جميعاً — يحضر أفراحنا ويحزن لأحزاننا. نعم، هو كاهن، لكنه أيضاً عائلة.»</p>
+                </blockquote>
+                <footer class="testimonial-card__author">
+                  <strong>بطرس م.</strong>
+                  <span>مهندس — الإسكندرية</span>
+                </footer>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="testimonial-card">
+                <div class="testimonial-card__photo">
+                  <img src="assets/images/placeholder.svg" alt="سناء ر." loading="lazy" width="80" height="80">
+                </div>
+                <blockquote class="testimonial-card__quote">
+                  <p>«عندما فقدت ابني، كان الأب بجانبي كل يوم. صلواته وكلماته أعادتني إلى الحياة. أشكر الله على وجوده في حياتي.»</p>
+                </blockquote>
+                <footer class="testimonial-card__author">
+                  <strong>سناء ر.</strong>
+                  <span>ربّة منزل — المنيا</span>
+                </footer>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="testimonial-card">
+                <div class="testimonial-card__photo">
+                  <img src="assets/images/placeholder.svg" alt="كيرلس ع." loading="lazy" width="80" height="80">
+                </div>
+                <blockquote class="testimonial-card__quote">
+                  <p>«كنت شاباً ضائعاً. الأب وجّهني نحو الطريق الصحيح وشجّعني على الدراسة اللاهوتية. اليوم أنا شماس بفضل دعائه.»</p>
+                </blockquote>
+                <footer class="testimonial-card__author">
+                  <strong>كيرلس ع.</strong>
+                  <span>شماس — أسيوط</span>
+                </footer>
+              </article>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LEGACY ==================== -->
+    <section class="legacy" id="legacy" aria-labelledby="legacy-title">
+      <div class="legacy__bg" style="background-image: url('assets/images/hero-poster.svg')" aria-hidden="true"></div>
+      <div class="legacy__overlay"></div>
+      <div class="legacy__content container" data-aos="fade-up">
+        <span class="legacy__tag">الإرث</span>
+        <h2 class="legacy__title" id="legacy-title">رسالة تتجاوز الزمن</h2>
+        <p class="legacy__text">
+          «لم أطلب يوماً أن أُذكر باسمي، بل أن يُذكر الله من خلال حياتي. كل قداس، كل زيارة، كل صلاة — هي بذرة أزرعها وأثق أن الرب سيُثمرها في قلوب من لم أرهم بعد.»
+        </p>
+        <p class="legacy__signature">— القس [اسم الكاهن]</p>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__tag">تواصل</span>
+          <h2 class="section__title" id="contact-title">كن على تواصل</h2>
+          <p class="section__desc">للزيارات والاستفسارات والدعم الروحي.</p>
+        </header>
+
+        <div class="contact__grid">
+          <div class="contact__info" data-aos="fade-right">
+            <article class="contact__card">
+              <div class="contact__card-icon" aria-hidden="true">⛪</div>
+              <h3>الكنيسة</h3>
+              <p>كنيسة [اسم الكنيسة]<br>[العنوان الكامل]<br>[المدينة، مصر]</p>
+            </article>
+            <article class="contact__card">
+              <div class="contact__card-icon" aria-hidden="true">📞</div>
+              <h3>الهاتف</h3>
+              <p><a href="tel:+201234567890">+20 123 456 7890</a></p>
+            </article>
+            <article class="contact__card">
+              <div class="contact__card-icon" aria-hidden="true">✉</div>
+              <h3>البريد الإلكتروني</h3>
+              <p><a href="mailto:info@church.example.com">info@church.example.com</a></p>
+            </article>
+
+            <div class="contact__social">
+              <a href="https://facebook.com/" class="contact__social-link" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك">Facebook</a>
+              <a href="https://youtube.com/" class="contact__social-link" target="_blank" rel="noopener noreferrer" aria-label="يوتيوب">YouTube</a>
+              <a href="https://instagram.com/" class="contact__social-link" target="_blank" rel="noopener noreferrer" aria-label="إنستغرام">Instagram</a>
+              <a href="https://wa.me/201234567890" class="contact__social-link" target="_blank" rel="noopener noreferrer" aria-label="واتساب">WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="contact__map" data-aos="fade-left">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.789!2d31.2357!3d30.0444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAyJzM5LjgiTiAzMcKwMTQnMDguNSJF!5e0!3m2!1sen!2seg!4v1234567890"
+              title="موقع الكنيسة على الخريطة"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">© 2026 — موقع تذكاري للقس [اسم الكاهن]. جميع الحقوق محفوظة.</p>
+      <p class="footer__verse">«لأَنَّهُ هكَذَا أَحَبَّ اللهُ الْعَالَمَ حَتَّى بَذَلَ ابْنَهُ الْوَحِيد» — يوحنا 3:16</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="العودة للأعلى" hidden>↑</button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
