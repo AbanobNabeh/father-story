@@ -572,7 +572,7 @@ ul { list-style: none; }
 
 .gallery__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 1.25rem;
   margin-bottom: 4rem;
 }
@@ -1366,6 +1366,33 @@ img[src*="assets/"] {
   }
 
   .btn { width: 100%; justify-content: center; max-width: 280px; }
+
+  .audio-player {
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .audio-player__art {
+    width: 110px;
+    height: 110px;
+  }
+
+  .audio-player__title { font-size: 1.15rem; }
+
+  .testimonial-card { padding: 1.5rem 1.25rem; }
+
+  .contact__card { padding: 1.25rem; }
+
+  .legacy__text { font-size: 1rem; }
+
+  .story__content { padding-block: 2.5rem; }
+}
+
+/* --- Global small-screen safety net --- */
+@media (max-width: 400px) {
+  html { font-size: 15px; }
+
+  .container { width: min(var(--container-width), 94vw); }
 }
 
 /* --- Reduced Motion --- */
